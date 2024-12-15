@@ -308,7 +308,7 @@ def main():
     # currently_playing = "./sample-music/my-lofi-morning-music-ig-version-60s-9651.mp3"
     currently_playing = music_list[0]
     song_idx = 0
-    currently_playing_name = currently_playing.split("\\")[-1].replace(".mp3", "")
+    currently_playing_name = os.path.basename(currently_playing).split("\\")[-1].replace(".mp3", "")
     # subprocess.call(["ffmpeg", "-i", currently_playing, "temp.wav"])
     wav_file = f"./temp/{currently_playing_name}.wav"
     if not os.path.isfile(f"./temp/{currently_playing_name}.wav"):
