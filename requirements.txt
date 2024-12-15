@@ -2,3 +2,4 @@ pygame
 rich
 keyboard
 ffmpeg-python
+mutagen
